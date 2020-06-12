@@ -6,11 +6,11 @@
 
 $(call inherit-product, device/xiaomi/cepheus/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common AOSIP stuff.
+$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_cepheus
+PRODUCT_NAME := aosip_cepheus
 PRODUCT_DEVICE := cepheus
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 9
@@ -24,3 +24,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="cepheus"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+WITH_GAPPS=true
